@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            Lista de películas
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-searchbar animated [(ngModel)]="searchName" (keyup)="searchMovies($event)" placeholder="Introduce el nombre de una película"></ion-searchbar>
+    <ion-list>
+        <ion-item>
+            <ion-label>Título</ion-label>
+        </ion-item>
+        <ion-item *ngFor="let movie of movies">
+            <ion-button class="button-transparent" fill="clear" (click)="openDetails(movie.imdbID) ">{{movie.Title}}</ion-button>
+        </ion-item>
+    </ion-list>
+</ion-content>

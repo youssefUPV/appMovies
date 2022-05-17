@@ -2,18 +2,18 @@ import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { MoviesPage } from './movies.page';
 
-import { TabsPageRoutingModule } from './tabs-routing.module';
-
-import { TabsPage } from './tabs.page';
+import { MoviesPageRoutingModule } from './movies-routing.module';
 
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
-    TabsPageRoutingModule
+    MoviesPageRoutingModule
   ],
-  declarations: [TabsPage]
+  declarations: [MoviesPage]
 })
-export class TabsPageModule {}
+
+export class MoviesPageModule {}
